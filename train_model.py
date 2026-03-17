@@ -52,6 +52,47 @@ def main():
         print(f"Error loading news.csv: {e}")
         return
 
+    # --- INJECT SYNTHETIC DATA ---
+    print("Injecting synthetic data...")
+    synthetic_data = [
+        # Universal Truths / Short facts (Real = 0)
+        {"text": "The earth is round.", "label": "Real"},
+        {"text": "Water boils at 100 degrees Celsius.", "label": "Real"},
+        {"text": "The sun rises in the east.", "label": "Real"},
+        {"text": "Humans need oxygen to survive.", "label": "Real"},
+        {"text": "Paris is the capital of France.", "label": "Real"},
+        {"text": "A triangle has three sides.", "label": "Real"},
+        {"text": "Dogs are mammals.", "label": "Real"},
+        {"text": "Gravity pulls objects toward the center of the Earth.", "label": "Real"},
+        {"text": "The moon orbits the Earth.", "label": "Real"},
+        {"text": "Ice is frozen water.", "label": "Real"},
+        {"text": "It is what it is.", "label": "Real"},
+        {"text": "This is a fact.", "label": "Real"},
+        {"text": "I am a human.", "label": "Real"},
+        {"text": "Fire is hot.", "label": "Real"},
+        {"text": "The sky is blue.", "label": "Real"},
+        
+        # Fake / Conspiracy theories (Fake = 1)
+        {"text": "The earth is flat.", "label": "Fake"},
+        {"text": "Lizard people rule the government secretly.", "label": "Fake"},
+        {"text": "Vaccines cause magnetism in human bodies.", "label": "Fake"},
+        {"text": "The moon landing was faked on a soundstage.", "label": "Fake"},
+        {"text": "Birds aren't real, they are government drones.", "label": "Fake"},
+        {"text": "5G towers cause viral infections.", "label": "Fake"},
+        {"text": "The sky is green.", "label": "Fake"},
+        {"text": "Drinking bleach cures all diseases.", "label": "Fake"},
+        {"text": "Aliens built the pyramids.", "label": "Fake"},
+        {"text": "Elvis is still alive.", "label": "Fake"},
+        {"text": "The government controls the weather with a machine.", "label": "Fake"},
+        {"text": "Dinosaurs never existed.", "label": "Fake"},
+        {"text": "The sun is cold.", "label": "Fake"},
+        {"text": "Gravity is an illusion.", "label": "Fake"}
+    ]
+    # Multiply by 50 to give the synthetic data enough weight to influence the model
+    df_synthetic = pd.DataFrame(synthetic_data * 50)
+    df = pd.concat([df, df_synthetic], ignore_index=True)
+    # -----------------------------
+
     print("Preprocessing data...")
     df['clean_text'] = df['text'].apply(preprocess_text)
 

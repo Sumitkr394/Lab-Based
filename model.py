@@ -19,8 +19,6 @@ class FakeNewsDetector:
             return {"error": "Model not loaded properly."}
             
         clean_text = preprocess_text(text)
-        if not clean_text:
-            return {"error": "Text is empty after preprocessing."}
 
         # Vectorize
         vec_text = self.vectorizer.transform([clean_text])

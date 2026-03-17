@@ -1,0 +1,104 @@
+[
+  {
+    "text": "The earth is round.",
+    "result": {
+      "prediction": "Real News",
+      "confidence_score": 92.4,
+      "key_words": [
+        "round",
+        "earth"
+      ],
+      "explanation": "The model detected formal language and credible patterns commonly associated with legitimate news."
+    }
+  },
+  {
+    "text": "Water boils at 100 degrees Celsius.",
+    "result": {
+      "prediction": "Real News",
+      "confidence_score": 93.0,
+      "key_words": [
+        "celsius",
+        "boils",
+        "degrees",
+        "water",
+        "100"
+      ],
+      "explanation": "The model detected formal language and credible patterns commonly associated with legitimate news."
+    }
+  },
+  {
+    "text": "The sun rises in the east.",
+    "result": {
+      "prediction": "Real News",
+      "confidence_score": 88.6,
+      "key_words": [
+        "rises",
+        "east",
+        "sun"
+      ],
+      "explanation": "The model detected formal language and credible patterns commonly associated with legitimate news."
+    }
+  },
+  {
+    "text": "Lizard people rule the government secretly.",
+    "result": {
+      "prediction": "Fake News",
+      "confidence_score": 95.3,
+      "key_words": [
+        "lizard",
+        "secretly",
+        "government",
+        "rule",
+        "people"
+      ],
+      "explanation": "The model detected sensational keywords and language patterns commonly associated with misinformation."
+    }
+  },
+  {
+    "text": "The moon landing was faked on a soundstage.",
+    "result": {
+      "prediction": "Fake News",
+      "confidence_score": 92.9,
+      "key_words": [
+        "faked",
+        "soundstage",
+        "landing",
+        "moon"
+      ],
+      "explanation": "The model detected sensational keywords and language patterns commonly associated with misinformation."
+    }
+  },
+  {
+    "text": "Aliens built the pyramids.",
+    "result": {
+      "prediction": "Fake News",
+      "confidence_score": 94.5,
+      "key_words": [
+        "aliens",
+        "pyramids",
+        "built"
+      ],
+      "explanation": "The model detected sensational keywords and language patterns commonly associated with misinformation."
+    }
+  },
+  {
+    "text": "It is what it is.",
+    "result": {
+      "prediction": "Fake News",
+      "confidence_score": 59.8,
+      "key_words": [],
+      "explanation": "The model detected sensational keywords and language patterns commonly associated with misinformation."
+    }
+  },
+  {
+    "text": "This is a fact.",
+    "result": {
+      "prediction": "Real News",
+      "confidence_score": 91.7,
+      "key_words": [
+        "fact"
+      ],
+      "explanation": "The model detected formal language and credible patterns commonly associated with legitimate news."
+    }
+  }
+]
